@@ -1,0 +1,31 @@
+{
+  "name": "get-current-date",
+  "version": "1.0.0",
+  "description": "Simple tool to get the current date and time written on Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carbongo/get-current-date.git"
+  },
+  "keywords": [
+    "current",
+    "date",
+    "time",
+    "current-date",
+    "current-time",
+    "get-current-date",
+    "get-current-time"
+  ],
+  "author": "carbongo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carbongo/get-current-date/issues"
+  },
+  "homepage": "https://github.com/carbongo/get-current-date#readme",
+  "dependencies": {
+    "yargs": "^16.2.0"
+  }
+}
