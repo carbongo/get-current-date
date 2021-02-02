@@ -5,10 +5,12 @@ const currentDate = new Date();
 
 // YARGS
 const argv = yargs(hideBin(process.argv))
-    .usage('Usage: gcd <COMMAND> [OPTION]')
-    .command('current', 'Display the current date')
-    .command('add', 'Add amount of time set by options to the current date')
-    .command('sub', 'Subtract amount of time set by options from the current date')
+    .usage('gcd <COMMAND> [OPTION]')
+    .usage('')
+    .usage('Displays the date')
+    .command('current', 'Display the current date. It will only show a certain part of the date, if there is at least one time-related option. Otherwise, the full ISO date will be displayed.')
+    .command('add', 'Add amount of time set by options to the current date. At least one time-related option is required.')
+    .command('sub', 'Subtract amount of time set by options from the current date. At least one time-related option is required.')
     .alias('y', 'year').describe('y', 'Year')
     .alias('m', 'month').describe('m', 'Month')
     .alias('d', 'date').describe('d', 'Date')
@@ -81,5 +83,5 @@ if (commands[0] === "add" || commands[0] === "sub") {
     if (month) value = returnCalculatedDate(value, "month", commands[0], month);
     if (date) value = returnCalculatedDate(value, "date", commands[0], date);
     if (!year && !month && !date) console.log('Cannot use ADD/SUB command without any time-related options. The current date is:');
-    console.log(value)
+    console.log(value.toISOString())
 };
