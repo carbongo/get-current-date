@@ -6,6 +6,10 @@
   "scripts": {
     "start": "node index.js"
   },
+  "bin": {
+    "get-current-date": "index.js",
+    "gcd": "index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/carbongo/get-current-date.git"
