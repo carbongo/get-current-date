@@ -37,6 +37,8 @@ Examples:
 
 ## Initialisation
 
+> NOTE: Linking/unlinking may require *sudo* rights 
+
 Before use:
 ```bash
 npm i
